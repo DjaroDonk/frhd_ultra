@@ -294,6 +294,61 @@ def type_bracketsclose(x,y,track,line_type="p"):
     track.insLine(x+10,y,x+10,y+20,line_type)
     track.insLine(x,y+20,x+10,y+20,line_type)
     return(15)
+def type_one(x,y,track,line_type="p"):
+    track.insLine(x+5,y,x+5,y+20,line_type)
+    track.insLine(x,y+5,x+5,y,line_type)
+    track.insLine(x,y+20,x+10,y+20,line_type)
+    return(15)
+def type_two(x,y,track,line_type="p"):
+    track.insLine(x,y+5,x+5,y,line_type)
+    track.insLine(x+5,y,x+10,y+5,line_type)
+    track.insLine(x+10,y+5,x,y+20,line_type)
+    track.insLine(x,y+20,x+10,y+20,line_type)
+    return(15)
+def type_three(x,y,track,line_type="p"):
+    track.insLine(x+10,y,x+10,y+20,line_type)
+    track.insLine(x,y,x+10,y,line_type)
+    track.insLine(x,y+20,x+10,y+20,line_type)
+    track.insLine(x,y+10,x+10,y+10,line_type)
+    return(15)
+def type_four(x,y,track,line_type="p"):
+    track.insLine(x+8,y,x+8,y+20,line_type)
+    track.insLine(x,y+10,x+10,y+10,line_type)
+    track.insLine(x+4,y,x,y+10,line_type)
+    return(15)
+def type_five(x,y,track,line_type="p"):
+    track.insLine(x,y,x+10,y,line_type)
+    track.insLine(x,y,x,y+10,line_type)
+    track.insLine(x,y+10,x+10,y+15,line_type)
+    track.insLine(x+10,y+15,x,y+20,line_type)
+    return(15)
+def type_six(x,y,track,line_type="p"):
+    track.insLine(x,y,x,y+20,line_type)
+    track.insLine(x,y,x+10,y,line_type)
+    track.insLine(x,y+10,x+10,y+10,line_type)
+    track.insLine(x,y+20,x+10,y+20,line_type)
+    track.insLine(x+10,y+10,x+10,y+20,line_type)
+    return(15)
+def type_seven(x,y,track,line_type="p"):
+    track.insLine(x+10,y,x+10,y+20,line_type)
+    track.insLine(x,y,x+10,y,line_type)
+    track.insLine(x+4,y+10,x+10,y+10,line_type)
+    return(15)
+def type_eight(x,y,track,line_type="p"):
+    track.insLine(x+5,y,x,y+5,line_type)
+    track.insLine(x+5,y,x+10,y+5,line_type)
+    track.insLine(x,y+5,x+10,y+15,line_type)
+    track.insLine(x+10,y+5,x,y+15,line_type)
+    track.insLine(x,y+15,x+5,y+20,line_type)
+    track.insLine(x+10,y+15,x+5,y+20,line_type)
+    return(15)
+def type_nine(x,y,track,line_type="p"):
+    track.insLine(x,y,x,y+10,line_type)
+    track.insLine(x,y,x+10,y,line_type)
+    track.insLine(x,y+10,x+10,y+10,line_type)
+    track.insLine(x+10,y,x+10,y+20,line_type)
+    track.insLine(x+10,y+20,x,y+20,line_type)
+    return(15)
 
 # track.insLine(x,y,x,y,line_type)
 letter_funcs = {" ":type_space,
@@ -354,7 +409,17 @@ letter_funcs = {" ":type_space,
                 "<":type_smallerthan,
                 ">":type_biggerthan,
                 "[":type_bracketsopen,
-                "]":type_bracketsclose}
+                "]":type_bracketsclose,
+                "1":type_one,
+                "2":type_two,
+                "3":type_three,
+                "4":type_four,
+                "5":type_five,
+                "6":type_six,
+                "7":type_seven,
+                "8":type_eight,
+                "9":type_nine,
+                "0":type_o}
 
 def type_string(track,x,y,my_text,line_type="p"):
     current_x = x
