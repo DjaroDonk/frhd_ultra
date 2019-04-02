@@ -270,6 +270,12 @@ def type_parenthesesopen(x,y,track,line_type="p"):
     track.insLine(x+3,y+10,x+5,y+16,line_type)
     track.insLine(x+5,y+16,x+10,y+20,line_type)
     return(15)
+def type_parenthesesclose(x,y,track,line_type="p"):
+    track.insLine(x,y,x+5,y+4,line_type)
+    track.insLine(x+5,y+4,x+7,y+10,line_type)
+    track.insLine(x+7,y+10,x+5,y+16,line_type)
+    track.insLine(x+5,y+16,x,y+20,line_type)
+    return(15)
 def type_smallerthan(x,y,track,line_type="p"):
     track.insLine(x+10,y,x,y+10,line_type)
     track.insLine(x,y+10,x+10,y+20,line_type)
@@ -278,6 +284,17 @@ def type_biggerthan(x,y,track,line_type="p"):
     track.insLine(x,y,x+10,y+10,line_type)
     track.insLine(x+10,y+10,x,y+20,line_type)
     return(15)
+def type_bracketsopen(x,y,track,line_type="p"):
+    track.insLine(x,y,x+10,y,line_type)
+    track.insLine(x,y,x,y+20,line_type)
+    track.insLine(x,y+20,x+10,y+20,line_type)
+    return(15)
+def type_bracketsclose(x,y,track,line_type="p"):
+    track.insLine(x,y,x+10,y,line_type)
+    track.insLine(x+10,y,x+10,y+20,line_type)
+    track.insLine(x,y+20,x+10,y+20,line_type)
+    return(15)
+
 # track.insLine(x,y,x,y,line_type)
 letter_funcs = {" ":type_space,
                 "\n":type_space,
@@ -333,9 +350,11 @@ letter_funcs = {" ":type_space,
                 "%":type_percent,
                 "&":type_and,
                 "(":type_parenthesesopen,
-                #")":type_parenthesesclose,
+                ")":type_parenthesesclose,
                 "<":type_smallerthan,
-                ">":type_biggerthan}
+                ">":type_biggerthan,
+                "[":type_bracketsopen,
+                "]":type_bracketsclose}
 
 def type_string(track,x,y,my_text,line_type="p"):
     current_x = x
