@@ -256,6 +256,21 @@ def type_percent(x,y,track,line_type="p"):
     track.insLine(x+17,y+17,x+20,y+17,line_type)
     track.insLine(x,y+20,x+20,y,line_type)
     return(25)
+def type_permille(x,y,track,line_type="p"):
+    track.insLine(x,y+3,x,y,line_type)
+    track.insLine(x+3,y+3,x+3,y,line_type)
+    track.insLine(x,y+3,x+3,y+3,line_type)
+    track.insLine(x,y,x+3,y,line_type)
+    track.insLine(x+17,y+20,x+17,y+17,line_type)
+    track.insLine(x+20,y+20,x+20,y+17,line_type)
+    track.insLine(x+17,y+20,x+20,y+20,line_type)
+    track.insLine(x+17,y+17,x+20,y+17,line_type)
+    track.insLine(x+10,y+20,x+10,y+17,line_type)
+    track.insLine(x+13,y+20,x+13,y+17,line_type)
+    track.insLine(x+10,y+20,x+13,y+20,line_type)
+    track.insLine(x+10,y+17,x+13,y+17,line_type)
+    track.insLine(x,y+20,x+20,y,line_type)
+    return(25)
 def type_and(x,y,track,line_type="p"):
     track.insLine(x+5,y,x,y+5,line_type)
     track.insLine(x+5,y,x+10,y+5,line_type)
@@ -349,19 +364,84 @@ def type_nine(x,y,track,line_type="p"):
     track.insLine(x+10,y,x+10,y+20,line_type)
     track.insLine(x+10,y+20,x,y+20,line_type)
     return(15)
+def type_twoarrows(x,y,track,line_type="p"):
+    type_biggerthan(x,y,track)
+    type_biggerthan(x+10,y,track)
+    return(25)
+def type_upsidedownquestion(x,y,track,line_type="p"):
+    track.insLine(x+10,y+20,x+10,y+15,line_type)
+    track.insLine(x+10,y+20,x,y+20,line_type)
+    track.insLine(x,y+20,x,y+10,line_type)
+    track.insLine(x,y+10,x+3,y+10,line_type)
+    track.insLine(x+3,y+10,x+3,y+2,line_type)
+    return(15)
+def type_line(x,y,track,line_type="p"):
+    track.insLine(x+5,y,x+5,y+20,line_type)
+    return(10)
+def type_tilde(x,y,track,line_type="p"):
+    track.insLine(x,y+5,x+5,y,line_type)
+    track.insLine(x+5,y,x+10,y+5,line_type)
+    track.insLine(x+10,y+5,x+15,y,line_type)
+    return(20)
+def type_uparrow(x,y,track,line_type="p"):
+    track.insLine(x,y+5,x+5,y,line_type)
+    track.insLine(x+5,y,x+10,y+5,line_type)
+    return(15)
+def type_equals(x,y,track,line_type="p"):
+    track.insLine(x,y+7,x+10,y+7,line_type)
+    track.insLine(x,y+14,x+10,y+14,line_type)
+    return(15)
+def type_plus(x,y,track,line_type="p"):
+    track.insLine(x+5,y,x+5,y+10,line_type)
+    track.insLine(x,y+5,x+10,y+5,line_type)
+    return(15)
+def type_onefourth(x,y,track,line_type="p"):
+    type_one(x,y,track,line_type)
+    type_four(x+20,y,track,line_type)
+    type_fwslash(x+10,y,track,line_type)
+    return(35)
+def type_half(x,y,track,line_type="p"):
+    type_one(x,y,track,line_type)
+    type_two(x+20,y,track,line_type)
+    type_fwslash(x+10,y,track,line_type)
+    return(35)
+def type_upsidedownexclamation(x,y,track,line_type="p"):
+    track.insLine(x+1,y+10,x+1,y+20,line_type)
+    track.insLine(x+2,y+10,x+2,y+20,line_type)
+    track.insLine(x,y+3,x,y,line_type)
+    track.insLine(x+3,y+3,x+3,y,line_type)
+    track.insLine(x,y+3,x+3,y+3,line_type)
+    track.insLine(x,y,x+3,y,line_type)
+    return(8)
+def type_highperiod(x,y,track,line_type="p"):
+    track.insLine(x,y+3,x,y,line_type)
+    track.insLine(x+3,y+3,x+3,y,line_type)
+    track.insLine(x,y+3,x+3,y+3,line_type)
+    track.insLine(x,y,x+3,y,line_type)
+    return(8)
 
 # track.insLine(x,y,x,y,line_type)
 letter_funcs = {" ":type_space,
                 "\n":type_space,
                 "a":type_a,
+                "à":type_a,
+                "â":type_a,
+                "ã":type_a,
+                "å":type_a,
+                "ä":type_a,
                 "b":type_b,
                 "c":type_c,
+                "©":type_c,
                 "d":type_d,
                 "e":type_e,
+                "é":type_e,
+                "ë":type_e,
                 "f":type_f,
                 "g":type_g,
                 "h":type_h,
                 "i":type_i,
+                "ï":type_i,
+                "í":type_i,
                 "j":type_j,
                 "k":type_k,
                 "l":type_l,
@@ -372,6 +452,8 @@ letter_funcs = {" ":type_space,
                 "q":type_q,
                 "r":type_r,
                 "s":type_s,
+                "š":type_s,
+                "§":type_s,
                 "t":type_t,
                 "u":type_u,
                 "v":type_v,
@@ -380,8 +462,12 @@ letter_funcs = {" ":type_space,
                 "y":type_y,
                 "z":type_z,
                 ".":type_period,
+                "·":type_highperiod,
+                "º":type_highperiod,
                 ",":type_comma,
                 "-":type_dash,
+                "¯":type_dash,
+                "\xad":type_dash,
                 "_":type_underscore,
                 "/":type_fwslash,
                 "\\":type_bwslash,
@@ -390,9 +476,12 @@ letter_funcs = {" ":type_space,
                 "\'":type_singlequote,
                 "‘":type_singlequote,
                 "’":type_singlequote,
+                "´":type_singlequote,
+                "`":type_singlequote,
                 "\"":type_doublequote,
                 "“":type_doublequote,
                 "”":type_doublequote,
+                "¨":type_doublequote,
                 ":":type_colon,
                 ";":type_semicolon,
                 "\t":type_space,
@@ -403,6 +492,7 @@ letter_funcs = {" ":type_space,
                 "$":type_dollar,
                 "€":type_euro,
                 "%":type_percent,
+                "‰":type_permille,
                 "&":type_and,
                 "(":type_parenthesesopen,
                 ")":type_parenthesesclose,
@@ -410,16 +500,33 @@ letter_funcs = {" ":type_space,
                 ">":type_biggerthan,
                 "[":type_bracketsopen,
                 "]":type_bracketsclose,
+                "}":type_parenthesesclose,
+                "{":type_parenthesesopen,
+                "»":type_twoarrows,
+                "^":type_uparrow,
+                "¿":type_upsidedownquestion,
+                "¡":type_upsidedownexclamation,
+                "|":type_line,
+                "¦":type_line,
+                "~":type_tilde,
+                "=":type_equals,
+                "+":type_plus,
+                "†":type_plus,
+                "¼":type_onefourth,
+                "½":type_half,
                 "1":type_one,
                 "2":type_two,
+                "²":type_two,
                 "3":type_three,
+                "³":type_three,
                 "4":type_four,
                 "5":type_five,
                 "6":type_six,
                 "7":type_seven,
                 "8":type_eight,
                 "9":type_nine,
-                "0":type_o}
+                "0":type_o,
+                "\xa0":type_space}
 
 def type_string(track,x,y,my_text,line_type="p"):
     current_x = x

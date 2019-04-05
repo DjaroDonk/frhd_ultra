@@ -12,16 +12,16 @@ class Track():
         self.trackdata = '' #This will hold the track's mathematical parts
         self.tracklist = [[],[],[]] #3 lists: one for physics lines, one for scenery, and one for powerups
 
-    def insLine(self,x1,y1,x2,y2,typeofline):
+    def insLine(self,x1,y1,x2,y2,typeofline="p"):
         if typeofline == 'p': #physics
             self.tracklist[0] += [[x1,y1,x2,y2]]
         if typeofline == 's': #scenery
             self.tracklist[1] += [[x1,y1,x2,y2]]
 
-    def insStar(self,x,y):
+    def insCheck(self,x,y):
         self.tracklist[2] += [['C',x,y]]
 
-    def insCheck(self,x,y):
+    def insStar(self,x,y):
         self.tracklist[2] += [['T',x,y]]
 
     def insSlowMo(self,x,y):
