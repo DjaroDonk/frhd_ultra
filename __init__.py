@@ -1,2 +1,2 @@
-from frhdtools import *
+from frhd_ultra.frhdtools import *
 import letter_font
