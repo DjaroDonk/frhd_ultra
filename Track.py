@@ -3,7 +3,7 @@
 #http://www.github.com/maxmillion18
 #http://www.freeriderhd.com/u/MaxwellNurzia
 
-from frhdtools import Encode as En #import Encode.py (for encoding base32)
+from frhd_ultra import Encode as En #import Encode.py (for encoding base32)
 
 class Track():
     """Create a freerider track instance."""

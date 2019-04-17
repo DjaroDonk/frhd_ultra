@@ -3,7 +3,7 @@
 #http://www.github.com/maxmillion18
 #http://www.freeriderhd.com/u/MaxwellNurzia
 
-from frhdtools import Decode as De #Decode.py - if you haven't already
+from frhd_ultra import Decode as De #Decode.py - if you haven't already
                                    #go take a look ;)
 
 def loadTrack(track):

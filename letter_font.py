@@ -1,4 +1,4 @@
-import frhdtools
+from frhd_ultra import Encode, Decode, Loader, Track
 def type_space(x,y,track,line_type="p"):
     return(10)
 def type_a(x,y,track,line_type="p"):
@@ -535,9 +535,9 @@ def type_string(track,x,y,my_text,line_type="p"):
         current_x += letter_funcs[character.lower()](current_x,current_y,track,line_type)
     return((current_x,current_y))
         
-my_track = frhdtools.Track.Track()
+my_track = Track.Track()
 
 def get_string(my_text,line_type="p",x=-40,y=100):
-    temp_track = frhdtools.Track.Track()
+    temp_track = Track.Track()
     type_string(temp_track,x,y,my_text)
     return(temp_track.genCode())
