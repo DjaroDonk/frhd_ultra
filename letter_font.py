@@ -392,9 +392,9 @@ def type_equals(x,y,track,line_type="p"):
     track.insLine(x,y+14,x+10,y+14,line_type)
     return(15)
 def type_plus(x,y,track,line_type="p"):
-    track.insLine(x+5,y,x+5,y+10,line_type)
-    track.insLine(x,y+5,x+10,y+5,line_type)
-    return(15)
+    track.insLine(x+10,y,x+10,y+20,line_type)
+    track.insLine(x,y+10,x+20,y+10,line_type)
+    return(25)
 def type_onefourth(x,y,track,line_type="p"):
     type_one(x,y,track,line_type)
     type_four(x+20,y,track,line_type)
