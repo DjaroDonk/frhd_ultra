@@ -1,4 +1,4 @@
-import frhdtools
+import frhd_ultra
 import letter_font
 import pyperclip
 import random
@@ -9,7 +9,7 @@ def not_zero(x):
         return(1)
     return(x)
 
-my_track = frhdtools.Track.Track()
+my_track = frhd_ultra.Track.Track()
 difficulty = input("What is the difficulty?\n")
 track_long = input("Is this track long? ('YES' or 'NO')\n")
 letter_font.type_string(my_track,-40,-190,"Procedurally Generated map")

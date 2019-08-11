@@ -534,10 +534,16 @@ def type_string(track,x,y,my_text,line_type="p"):
     for character in my_text:
         current_x += letter_funcs[character.lower()](current_x,current_y,track,line_type)
     return((current_x,current_y))
-        
-my_track = Track.Track()
+
 
 def get_string(my_text,line_type="p",x=-40,y=100):
     temp_track = Track.Track()
     type_string(temp_track,x,y,my_text)
     return(temp_track.genCode())
+
+def type_lines(the_string, the_track,x,y,linetype="p"):
+    i = y
+    for the_line in the_string.split("\n"):
+        type_string(my_track,x,i,the_line,linetype)
+        i+=40
+    return(i)
