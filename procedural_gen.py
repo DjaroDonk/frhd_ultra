@@ -1,5 +1,5 @@
 import frhd_ultra
-import letter_font
+from frhd_ultra import letter_font
 import pyperclip
 import random
 def between(x,y):
@@ -12,6 +12,8 @@ def not_zero(x):
 my_track = frhd_ultra.Track.Track()
 difficulty = input("What is the difficulty?\n")
 track_long = input("Is this track long? ('YES' or 'NO')\n")
+letter_font.type_string(my_track,-40,-250,"This track was made by an AI")
+letter_font.type_string(my_track,-40,-220,"using FRHD_ULTRA by Djaro")
 letter_font.type_string(my_track,-40,-190,"Procedurally Generated map")
 letter_font.type_string(my_track,-40,-160,"Difficulty: " + str(difficulty))
 if track_long.lower() == "yes":
